@@ -16,7 +16,7 @@ public class MovieService {
         return movieRepo.findAll();
     }
 
-    public Optional<Movie> singleMovie(ObjectId id){
-        return movieRepo.findById(id);
+    public Optional<Movie> singleMovie(String imdbId){
+        return movieRepo.findMovieByImdbId(imdbId);
     }
 }
